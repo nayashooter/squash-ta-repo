@@ -1,0 +1,19 @@
+// lines prefixed with double slashes count as commentary.
+// the following test will just load a file during the setup phase
+// and make it available in the test context. Read the documentation
+// to know more about scripting. 
+
+
+SETUP :
+
+LOAD "C:\Users\surface\Documents\SquashTA-Server-1.8.1-RELEASE\execution_home\jobs\Shell job\scripts\script.cmd" AS command.file
+CONVERT command.file TO query.shell AS commandLine
+//CONVERT resource TO query.shell AS commandLine
+
+// here we test the macro defined in shortcuts/sample_shortcut.macro. Note that none of the instructions here are case sensitive :
+
+TEST :
+
+EXECUTE local WITH commandLine  USING $(timeout:15000, streamlength:full) AS result
+
+ASSERT result DOES contain WITH $(test) USING $(out)

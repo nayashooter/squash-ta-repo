@@ -1,0 +1,1 @@
+echo bonjour, ceci est un test de script TA !!!
