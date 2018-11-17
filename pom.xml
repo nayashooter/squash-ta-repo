@@ -46,12 +46,15 @@
 						</exporter>
 					</exporters>
 					<configurers>
-						<configurer implementation="org.squashtest.ta.link.SquashTMCallbackEventConfigurer">
+						<configurer implementation="org.squashtest.ta.link.SquashTMCallbackEventConfigurer">						
 							<endpointURL>${status.update.events.url}</endpointURL>
-							<executionExternalId>${squash.ta.external.id}</executionExternalId>
-							<jobName>${jobname}</jobName>
-							<hostName>${hostname}</hostName>
-							<endpointLoginConfFile>${squash.ta.conf.file}</endpointLoginConfFile>
+					<executionExternalId>${squash.ta.external.id}</executionExternalId>
+					<jobName>${jobname}</jobName>
+					<hostName>${hostname}</hostName>
+					<endpointLoginConfFile>${squash.ta.conf.file}</endpointLoginConfFile>
+				        <reportBaseUrl>${ta.tmcallback.reportbaseurl}</reportBaseUrl>
+				        <jobExecutionId>${ta.tmcallback.jobexecutionid}</jobExecutionId>
+				        <reportName>${ta.tmcallback.reportname}</reportName>
 						</configurer>
 					</configurers>
 				</configuration>
