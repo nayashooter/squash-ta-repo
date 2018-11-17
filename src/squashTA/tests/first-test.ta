@@ -6,7 +6,7 @@
 
 SETUP :
 
-LOAD "C:\Users\surface\Documents\SquashTA-Server-1.8.1-RELEASE\execution_home\jobs\Shell job\scripts\script.cmd" AS command.file
+LOAD script.cmd AS command.file
 CONVERT command.file TO query.shell AS commandLine
 //CONVERT resource TO query.shell AS commandLine
 
